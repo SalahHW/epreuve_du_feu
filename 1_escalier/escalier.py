@@ -1,11 +1,15 @@
-import sys
+import sys, os
 
-if len(sys.argv) < 1:
-  print(__file__+' require at least one parameter.')
-  exit
-elif len(sys.argv) > 1:
-  print(__file__+' require only one parameter.')
-  exit
+filename = os.path.basename(sys.argv[0])
+
+if len(sys.argv) < 2:
+  print(filename+' require at least one parameter.')
+  quit()
+elif len(sys.argv) > 2:
+  print(filename+' require only one parameter.')
+  quit()
+
+print(len(sys.argv))
 
 number_of_steps = int(sys.argv[1])
 print('Your stair will have '+ str(number_of_steps) + ' steps :')

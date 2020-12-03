@@ -9,8 +9,6 @@ elif len(sys.argv) > 2:
   print(filename+' require only one parameter.')
   quit()
 
-print(len(sys.argv))
-
 number_of_steps = int(sys.argv[1])
 print('Your stair will have '+ str(number_of_steps) + ' steps :')
 
